@@ -1,0 +1,105 @@
+@import url(./settings.css);
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#rc-logo{
+  height: 50px;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+}
+header > a{
+  text-decoration: none;
+  color: var(--text-color);
+  margin: 15px 15px 0 0;
+  height: 25px;
+  width: 120px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 300ms ease-in-out;
+}
+header > a:hover{
+  color: lightgray;
+  font-size: large;
+}
+
+main{
+  align-self: center;
+}
+
+.login-section {
+  background-color: var(--normal-color);
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 0 var(--highlight-color-light);
+  transition: all 300ms ease-in-out;
+}
+
+.form-text{
+  text-align: center;
+}
+
+#corp-link-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+#corp-id,
+#corp-screen-code {
+  background-color: var(--background-color);
+  border: var(--button-color) 1px solid;
+  border-radius: 7px;
+  height: 25px;
+  color: var(--text-color) !important;
+  caret-color: gray;
+}
+
+.was-submitted #corp-id:invalid,
+.was-submitted #corp-screen-code:invalid {
+  box-shadow: 0 0 2px 0 red;
+}
+
+.was-submitted #corp-id:valid,
+.was-submitted #corp-screen-code:valid {
+  box-shadow: 0 0 2px 0 green;
+}
+
+#corp-id:hover,
+#corp-screen-code:hover {
+  background-color: var(--hover-color);
+}
+
+#corp-id:focus,
+#corp-screen-code:focus {
+  border: var(--button-color) 1px solid !important;
+  box-shadow: 0 0 5px 1px var(--highlight-color-light) !important;
+  outline: none;
+}
+
+#corp-submit {
+  background-color: var(--background-color);
+  border: var(--button-color) 1px solid;
+  height: 25px;
+  border-radius: 10px;
+  color: var(--text-color);
+  transition: all 150ms ease-in-out;
+}
+
+#corp-submit:hover {
+  box-shadow: 0 0 5px 0 var(--highlight-color-light);
+  background-color: var(--hover-color);
+}
+
+footer {
+  height: 50px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}

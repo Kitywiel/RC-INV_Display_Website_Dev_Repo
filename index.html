@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/RC-INV LOGO BLUE.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>RC-INV Displays</title>
+</head>
+<body>
+  <!--  ≽^★⩊★^≼  -->
+  <header>
+    <img id="rc-logo" src="./images/RC-INV LOGO BLACK.png" alt="">
+    <a href="#">go to main site</a>
+  </header>
+  <main>
+    <p></p>
+    <div class="login-section">
+      <div class="form-text">
+        <h1>Display Login</h1>
+        <p>Welcome to our display service for your business</p> 
+      </div>
+      <form action="./display.html" id="corp-link-form" novalidate>
+        <p>Corperation ID:</p>
+        <input type="text" name="corp-id" id="corp-id" autocomplete="off" required>
+        <p>Screen Link Code:</p>
+        <input type="text" name="corp-screen-code" id="corp-screen-code" autocomplete="off" required>
+        <input type="submit" value="Login" id="corp-submit">
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>&#169 2025-2026 by Phoenix Digital Development. All Rights Reserved.</p>
+  </footer>
+  <script>
+    const form = document.getElementById("corp-link-form");
+
+    form.addEventListener("submit", (e) => {
+      form.classList.add("was-submitted");
+    
+      if (!form.checkValidity()) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+</html>
