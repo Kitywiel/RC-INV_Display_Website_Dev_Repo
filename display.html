@@ -7,6 +7,76 @@
   <title>display</title>
 </head>
 <body>
-  
+  <!--  ≽^•⩊•^≼  -->
+  <header></header>
+    <div id="Not_Linked">
+      <p id="Not_Linked_Text">! LINK ERROR !</p>
+      <p id="Not_Linked_Text1">! this is not an valid screen link or its an expired link !</p>
+      <p id="Not_Linked_Text1">Pleas retry or generate an new code.</p>
+    </div>
+    <div id="Screen_defalt">
+      <div id="SD-box-1"> <!-- tht/notes bar -->
+        <h2>THT / Notes</h2>
+        <div id="SD-THT-scroll-box">
+          <div id="SD-THT-place">
+            <img id="SD-THT-Item-image" src="./images/RC-INV LOGO BLUE.png" alt="">
+            <p id="SD-THT-Name-Item">name</p>
+            <div>
+              <p id="SD-THT-Item-Count">item count</p>
+              <p id="SD-THT-Catogory">item catogory</p>
+            </div>
+            <p id="SD-THT-Item-THT">item tht</p>
+            <p Id="SD-THT-Item-Flag">item flag?</p>
+            <div id="SD-THT-item-status">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="SD-box-2"> <!-- Flags bar -->
+        box 2
+      </div>
+      <div id="SD-box-3"> <!-- info/time/weather bar -->
+        box 3
+      </div>
+      <div id="SD-box-4"> <!-- Deliverys/logs bar -->
+        <p>box 4</p>
+        <!-- <h2>deliverys</h2> -->
+        <div>
+          <h3></h3>
+        </div>
+      </div>
+       <div id="SD-box-5"> <!-- flasher -->
+        box 5
+      </div>
+      <div id="SD-box-6"> <!-- lower info bar -->
+        box 6
+      </div>
+      <div id="SD-box-7"> <!-- flasher -->
+        box 7
+      </div>
+    </div>
+  <footer></footer>
+  <script>
+    const box = document.getElementById("SD-THT-scroll-box");
+
+    let pos = 0;
+    let speed = 0.5;
+    
+    function loop() {
+      if (box.scrollHeight > box.clientHeight) {
+        pos += speed;
+        box.scrollTop = pos;
+        
+        // restart when bottom is reached
+        if (pos >= box.scrollHeight - box.clientHeight) {
+          pos = 0;
+        }
+      }
+    
+      requestAnimationFrame(loop);
+    }
+    
+    loop();
+  </script>
 </body>
 </html>

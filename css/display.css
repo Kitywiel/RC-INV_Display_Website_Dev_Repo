@@ -1,1 +1,97 @@
 @import url(./settings.css);
+
+/* Screen not linked section */
+#Not_Linked{
+  display: flex;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 30px 0 var(--highlight-color) inset;
+  visibility: hidden;
+}
+
+#Not_Linked_Text {
+  font-size: 13.5vw;
+}
+
+#Not_Linked_Text1 {
+  font-size: 4.5vw;
+}
+/* defalt screen section */
+/* grid declare */
+
+#SD-box-1{grid-area: s1;}
+#SD-box-2{grid-area: s2;}
+#SD-box-3{grid-area: s3;}
+#SD-box-4{grid-area: s4;}
+#SD-box-5{grid-area: s5;}
+#SD-box-6{grid-area: s6;}
+#SD-box-7{grid-area: s7;}
+
+#Screen_defalt{
+  position: fixed;
+  box-sizing: border-box;
+
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+
+  /* grid layout */
+  display: grid;
+  grid: 
+  's1 s1 s2 s2 s2 s3'
+  's1 s1 s2 s2 s2 s3'
+  's1 s1 s2 s2 s2 s3'
+  's1 s1 s2 s2 s2 s4'
+  's1 s1 s2 s2 s2 s4'
+  's1 s1 s2 s2 s2 s4'
+  's5 s6 s6 s6 s6 s7'
+  ;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  /* visibility: hidden; */
+}
+/* other settings for grid */
+#Screen_defalt > div {
+  /* border: white 1px solid; */
+  overflow: hidden;
+}
+
+#SD-box-5, #SD-box-7{
+  background-color: chartreuse;
+  border-radius: 25px;
+}
+/* tht/notes bar settings */
+#SD-box-1{
+  display: flex;
+  flex-direction: column;
+}
+#SD-THT-scroll-box{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll !important;
+  scrollbar-width: none;
+  gap: 7px;
+}
+#SD-THT-place{
+  background-color: var(--normal-color);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+#SD-THT-Item-image {
+  width: 50px;
+  height: 50px;
+}
+#SD-THT-item-status{
+  height: 25px;
+  width: 25px;
+  background-color: yellow;
+  border-radius: 25px;
+  margin-right: 10px;
+}
