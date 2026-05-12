@@ -1,5 +1,5 @@
 // ---------------- CONFIG ----------------
-const apiKey = "585d430d04717c34179c2c2c240d514f";
+const apiKey = "";
 
 const fallbackLat = 52.1561; // Amersfoort
 const fallbackLon = 5.3878;
