@@ -18,9 +18,9 @@
 #Not_Linked_Text1 {
   font-size: 4.5vw;
 }
+
 /* defalt screen section */
 /* grid declare */
-
 #SD-box-1{grid-area: s1;}
 #SD-box-2{grid-area: s2;}
 #SD-box-3{grid-area: s3;}
@@ -53,21 +53,52 @@
   grid-template-rows: repeat(7, 1fr);
   /* visibility: hidden; */
 }
+
 /* other settings for grid */
 #Screen_defalt > div {
-  /* border: white 1px solid; */
+  border: white 1px solid;
   overflow: hidden;
 }
 
-#SD-box-5, #SD-box-7{
-  background-color: chartreuse;
-  border-radius: 25px;
+#SD-box-7{
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px 0 0 0;
 }
+
+#SD-box-5{
+  background-color: rgb(112, 250, 255);
+  border-radius: 0 5px 0 0;
+}
+
+#SD-Flags-Top-Info{
+  display: flex;
+  justify-content: space-around;
+}
+
+#SD-Flags-Top-Info-Bar{
+  display: flex;
+  gap: 2vw;
+  margin: 0 10px 0 20px;
+}
+
+#SD-THT-Top-Bar{
+  display: flex;
+  justify-content: space-around;
+}
+
+#SD-THT-Top-Info-Bar{
+  display: flex;
+  justify-content: space-between;
+  font-size: large;
+  margin: 0 5px 10px 10px;
+}
+
 /* tht/notes bar settings */
 #SD-box-1{
   display: flex;
   flex-direction: column;
 }
+
 #SD-THT-scroll-box{
   display: flex;
   flex-direction: column;
@@ -75,7 +106,8 @@
   scrollbar-width: none;
   gap: 7px;
 }
-#SD-THT-place{
+
+.SD-THT-place{
   background-color: var(--normal-color);
   border-radius: 5px;
   display: flex;
@@ -88,10 +120,44 @@
   width: 50px;
   height: 50px;
 }
+
 #SD-THT-item-status{
   height: 25px;
   width: 25px;
   background-color: yellow;
   border-radius: 25px;
   margin-right: 10px;
+}
+
+#SD-box-6{
+  text-align: center;
+}
+
+#SD-box-2{
+  display: flex;
+  flex-direction: column;
+}
+
+#SD-Flasg-Flag-Scroll-Box{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll !important;
+  scrollbar-width: none;
+  gap: 7px;
+}
+
+#time-box{
+  text-align: center;
+  font-size: larger;
+}
+
+#SD-box-3{
+  display: flex;
+  flex-direction: column;
+}
+
+#weather-box{
+  margin-top: 5vh;
+  text-align: center;
+  font-size: larger;
 }

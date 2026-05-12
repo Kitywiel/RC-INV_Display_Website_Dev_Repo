@@ -1,9 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./images/RC-INV LOGO BLUE.png" type="image/x-icon">
+  <script src="./js/test.js"></script>
   <link rel="stylesheet" href="./css/display.css">
+  
   <title>display</title>
 </head>
 <body>
@@ -16,67 +19,109 @@
     </div>
     <div id="Screen_defalt">
       <div id="SD-box-1"> <!-- tht/notes bar -->
-        <h2>THT / Notes</h2>
+        <div id="SD-THT-Top-Bar">
+          <h2>THT / Notes</h2>
+          <h3 id="SD-THT-Total-Item-Count">total items: 1</h3>
+        </div>
+        <div id="SD-THT-Top-Info-Bar">
+          <p>icon</p>
+          <p>name</p>
+          <p>count</p>
+          <p>catogory</p>
+          <p>tht</p>
+          <p>flags</p>
+          <p>status</p>
+        </div>
+        <h3></h3>
         <div id="SD-THT-scroll-box">
-          <div id="SD-THT-place">
-            <img id="SD-THT-Item-image" src="./images/RC-INV LOGO BLUE.png" alt="">
-            <p id="SD-THT-Name-Item">name</p>
-            <div>
-              <p id="SD-THT-Item-Count">item count</p>
-              <p id="SD-THT-Catogory">item catogory</p>
-            </div>
-            <p id="SD-THT-Item-THT">item tht</p>
-            <p Id="SD-THT-Item-Flag">item flag?</p>
-            <div id="SD-THT-item-status">
-            </div>
-          </div>
         </div>
       </div>
       <div id="SD-box-2"> <!-- Flags bar -->
-        box 2
-      </div>
-      <div id="SD-box-3"> <!-- info/time/weather bar -->
-        box 3
-      </div>
-      <div id="SD-box-4"> <!-- Deliverys/logs bar -->
-        <p>box 4</p>
-        <!-- <h2>deliverys</h2> -->
-        <div>
-          <h3></h3>
+        <div id="SD-Flags-Top-Info">
+          <h2>items flags</h2>
+          <h3>total flags: 1</h3>
+        </div>
+        <div id="SD-Flags-Top-Info-Bar">
+          <p>icon</p>
+          <p>name</p>
+          <p>status</p>
+          <p>flag info</p>
+        </div>
+        <div id="SD-Flasg-Flag-Scroll-Box">
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
+          <h1>test</h1>
         </div>
       </div>
-       <div id="SD-box-5"> <!-- flasher -->
-        box 5
+      <div id="SD-box-3"> <!-- info/time/weather bar -->
+        <div id="time-box">
+          <h1 id="time"></h1>
+          <h1 id="date"></h1>
+        </div>
+        <div id="weather-box">
+          <p id="weather-temp"></p>
+          <p id="weather-type"></p>
+          <p id="weather-humidity"></p>
+          <p id="weather-wind"></p>
+        </div>
       </div>
+      <div id="SD-box-4"> <!-- Deliverys/logs bar -->
+        <h2>Deliverys:</h2>
+        <div>
+          <div>
+            <h1>test</h1>
+            <h1>test</h1>
+          </div>
+        </div>
+      </div>
+       <div id="SD-box-5"> <!-- flasher --> </div>
       <div id="SD-box-6"> <!-- lower info bar -->
-        box 6
+        <h1 id="SD-Lower-Info-1">Test Text</h1>
+        <h1 id="SD-Lower-Info-2">Test Text</h1>
+        <h1 id="SD-Lower-Info-3">Test Text</h1>
+        <h1 id="SD-Lower-Info-4">Test Text</h1>
       </div>
-      <div id="SD-box-7"> <!-- flasher -->
-        box 7
-      </div>
+      <div id="SD-box-7"> <!-- flasher --> </div>
     </div>
   <footer></footer>
-  <script>
-    const box = document.getElementById("SD-THT-scroll-box");
-
-    let pos = 0;
-    let speed = 0.5;
-    
-    function loop() {
-      if (box.scrollHeight > box.clientHeight) {
-        pos += speed;
-        box.scrollTop = pos;
-        
-        // restart when bottom is reached
-        if (pos >= box.scrollHeight - box.clientHeight) {
-          pos = 0;
-        }
-      }
-    
-      requestAnimationFrame(loop);
-    }
-    
-    loop();
-  </script>
+  <script src="./js/auto_scroll.js"></script>
+  <script src="./js/itme.js"></script>
+  
 </body>
 </html>
